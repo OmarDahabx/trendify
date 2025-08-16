@@ -1,0 +1,9 @@
+.container{
+    margin-inline: auto;
+}
+.home{
+    background-image: url(../../../../public/assets/img/wraper-min.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

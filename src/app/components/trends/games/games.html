@@ -1,0 +1,17 @@
+<article>
+  <div class="container">
+    <h2 class="text-4xl font-bold mb-20 color-sec playwrite">Games</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+      @for (game of gamesItems; track $index) {
+        <div class="bg-red-700 rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+          <div class="w-full h-96">
+            <img [src]="game.image" class="w-full h-full object-cover" [alt]="game.title">
+          </div>
+          <div class="p-4 flex flex-col flex-grow">
+            <h5 class="text-lg font-semibold mb-2">title : {{game.title}}</h5>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</article>

@@ -1,0 +1,85 @@
+<section id="contact" class="py-30">
+    <div class="container">
+        <h3 class="title color-sec text-7xl mb-10 playwrite">
+            Contact me
+        </h3>
+        <p class="subTitle text-2xl mb-20">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        </p>
+
+        <div class="contactForm">
+            <form class="mt-10 grid gap-4">
+              <div class="flex gap-4 items-center flex-wrap md:flex-nowrap">
+                <div class="w-full md:w-1/2">
+                  <label for="firstName" class="block text-2xl">first Name</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    class="text-2xl w-full mt-2 rounded border border-main px-1 py-2 focus:outline-none focus:ring-main"
+                  />
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <label for="lastName" class="block text-2xl">last Name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    class="text-2xl w-full mt-2  rounded border border-main px-1 py-2 focus:outline-none focus:ring-main"
+                  />
+                </div>
+              </div>
+
+              <div class="flex gap-4 items-center flex-wrap md:flex-nowrap">
+                <div class="w-full md:w-1/2">
+                  <label for="email" class="block text-2xl">Email </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="text-2xl w-full mt-2 rounded border border-main px-1 py-2 focus:outline-none focus:ring-main"
+                  />
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <label for="phone" class="block text-2xl">Phone </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="text-2xl w-full mt-2 rounded border border-main px-1 py-2 focus:outline-none focus:ring-main"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="choose" class="block text-2xl">Choose a Topic </label>
+                <select
+                  id="choose"
+                  name="choose"
+                  class="text-2xl w-full mt-2 rounded border border-main px-1 py-2 focus:outline-none focus:ring-main"
+                >
+                  <option value="" disabled selected>Select one..</option>
+                  <option value="html">html</option>
+                  <option value="css">css</option>
+                  <option value="js">js</option>
+                  <option value="bootstrap">bootstrap</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-2xl">Message </label>
+                <textarea
+                  placeholder="type message"
+                  id="message"
+                  name="message"
+                  class="text-2xl w-full h-40 mt-2 bg-section/80 rounded border border-main px-1 py-2 focus:outline-none focus:ring-main"
+                ></textarea>
+              </div>
+
+              <button class="btn w-fit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>

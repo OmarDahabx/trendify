@@ -1,0 +1,111 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@tailwind utilities;
+
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+/* @import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap'); */
+:root{
+  /* --font-main:"Playwrite HU", cursive; */
+  --color-main: #8b5e35;
+  --sec-color:#000000;
+  --ground: #f6f6f6;
+  --textSec: #090f41;
+}
+*{
+  /* font-family: "Playwrite HU", cursive; */
+  font-style: normal;
+}
+@theme {
+  --font-main: "Playwrite HU", cursive;
+  --color-main: #8b5e35;
+  --ground: #f6f6f6;
+  --textSec: #090f41;
+  --footy: #2E2E2E;
+}
+
+@layer base {
+  /* @import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap'); */
+
+  *, *::before, *::after { box-sizing: border-box; 
+  }
+
+  html { scroll-behavior: smooth; }
+
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    /* font-family: var(--font-sans); */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar { width: 7px; background-color: #2b3d4f; }
+  ::-webkit-scrollbar-thumb { background-color: #ffffffb1; border-radius: 2px; }
+}
+body{
+  font-family: "Playwrite HU", cursive;
+}
+
+.title{
+  color: var(--color-main);
+  font-family: "Playwrite HU", ui-sans-serif;
+  font-weight: bold;
+}
+.subTitle{
+  color: var(--sec-color);
+}
+.bg-main{
+  background-color: var(--color-main);
+}
+.color-main{
+  color: var(--color-main);
+}
+.bg-section{
+  background-color: var(--ground);
+}
+.color-sec{
+  color: var(--textSec);
+}
+.bg-sec{
+  background-color: var(--textSec);
+}
+.bg-footer{
+  background-color: var(--footy);
+}
+
+.btn{
+  background-color: var(--color-main);
+  color: var(--ground);
+  font-size: 25px;
+  width: 200px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+.btn:hover{
+  background-color: #b47d48;
+}
+.container{
+  margin-inline: auto;
+}
+/* .playwrite{
+  font-family: "Playwrite HU", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+} */
+.navActive{
+  color: var(--color-main);
+}

@@ -1,0 +1,77 @@
+<article>
+  <div class="container">
+    <h2 class="text-4xl font-bold mb-20 color-sec playwrite">Movies</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+      @for (movie of moveisItems.slice(0,8); track movie.id) {
+        <div class="bg-main rounded-lg shadow-md shadow-amber-800 overflow-hidden flex flex-col h-full">
+          <div class="w-full h-96">
+            <img [src]="imgSrc + movie.poster_path" class="w-full h-full object-cover" alt="...">
+          </div>
+          <div class="p-4 flex flex-col flex-grow">
+            @if (movie.title) {
+              <h5 class="text-2xl font-semibold mb-2">title : {{movie.title}}</h5>
+            } @else {
+              <h5 class="text-2xl font-semibold mb-2">name : {{movie.name}}</h5>
+            }
+            <p class="text-gray-200 text-xl mt-auto">
+              {{movie.overview.split(' ',3).join(" ")}}
+            </p>
+          </div>
+        </div>
+      }
+
+    </div>
+
+    <div #hamada class="div my-14 py-10 text-center bg-sec">
+      <button class="btn">See More</button>
+    </div>
+
+    @defer (on interaction (hamada)) {
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+        @for (movie of moveisItems.slice(8,moveisItems.length); track movie.id) {
+          <div class="bg-main rounded-lg shadow-md shadow-amber-800 overflow-hidden flex flex-col h-full">
+            <div class="w-full h-96">
+              <img [src]="imgSrc + movie.poster_path" class="w-full h-full object-cover" alt="...">
+            </div>
+            <div class="p-4 flex flex-col flex-grow">
+              @if (movie.title) {
+                <h5 class="text-2xl font-semibold mb-2">title : {{movie.title}}</h5>
+              } @else {
+                <h5 class="text-2xl font-semibold mb-2">name : {{movie.name}}</h5>
+              }
+              <p class="text-gray-200 text-xl mt-auto">
+                {{movie.overview.split(' ',3).join(" ")}}
+              </p>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+        @for (movie of moveisItems ; track movie.id) {
+          <div class="bg-main rounded-lg shadow-md shadow-amber-800 overflow-hidden flex flex-col h-full">
+            <div class="w-full h-96">
+              <img [src]="imgSrc + movie.poster_path" class="w-full h-full object-cover" alt="...">
+            </div>
+            <div class="p-4 flex flex-col flex-grow">
+              @if (movie.title) {
+                <h5 class="text-2xl font-semibold mb-2">title : {{movie.title}}</h5>
+              } @else {
+                <h5 class="text-2xl font-semibold mb-2">name : {{movie.name}}</h5>
+              }
+              <p class="text-gray-200 text-xl mt-auto">
+                {{movie.overview.split(' ',3).join(" ")}}
+              </p>
+            </div>
+          </div>
+        }
+      </div>
+    }
+    @loading{
+        <div class="flex justify-center items-center my-10">
+          <div class="w-12 h-12 border-4 border-main border-t-transparent rounded-full animate-spin"></div>
+        </div>
+    }
+
+  </div>
+</article>

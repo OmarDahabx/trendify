@@ -1,0 +1,23 @@
+<section id="trends" class="trends py-30">
+  <div class="container">
+    <h3 class="text-center title text-7xl font-bold after:w-20 after:h-0.5 after:absolute after:start-1/2 after:top-[120%] after:-translate-x-1/2 after:z-10 after:bg-main relative mb-10 playwrite">Trends</h3>
+
+    <div class="trendsContent grid grid-cols-[200px_1fr] gap-24 py-15 relative">
+      <div class="sideBar bg-main relative p-8 w-[248px]">
+        <ul class="grid gap-10 sticky top-20 left-0 w-full">
+          <li><a class="text-5xl color-sec" routerLink="products" routerLinkActive="active">prodcuts</a></li>
+          <li><a class="text-5xl color-sec" routerLink="games" routerLinkActive="active">Games</a></li>
+          <li><a class="text-5xl color-sec" routerLink="movies" routerLinkActive="active">Movies</a></li>
+        </ul>
+      </div>
+
+
+
+      <div class="trendsScreen">
+        <div class="scrn">
+            <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
